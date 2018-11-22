@@ -7,6 +7,9 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QSystemTrayIcon, QMenu, QAction
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -493,7 +496,7 @@ class Ui_MainWindow(object):
         self.pix_label_1 = QtWidgets.QLabel(self.centralwidget)
         self.pix_label_1.setGeometry(QtCore.QRect(10, 360, 150, 150))
         self.pix_label_1.setText("")
-        self.pix_label_1.setPixmap(QtGui.QPixmap("../../主页/iamywang.github.io/assets/img/self.jpg"))
+        self.pix_label_1.setPixmap(QtGui.QPixmap("gui/auth.jpg"))
         self.pix_label_1.setScaledContents(True)
         self.pix_label_1.setObjectName("pix_label_1")
         self.pix_label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -570,23 +573,26 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "PGP客户端（Based on Qt5）"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "PGP客户端（Based on Qt5） Version 0.9"))
+        MainWindow.setWindowIcon((QIcon("gui/tray.ico")))
         self.title_label_1.setText(_translate("MainWindow", "密钥管理"))
         self.key_label_1.setText(_translate("MainWindow", "姓名"))
         self.key_label_2.setText(_translate("MainWindow", "电子邮件"))
         self.key_label_3.setText(_translate("MainWindow", "密码"))
         self.key_label_4.setText(_translate("MainWindow", "RSA密钥长度"))
         self.key_label_5.setText(_translate("MainWindow", "期限"))
-        self.key_tf_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">4096</p></body></html>"))
-        self.key_tf_5.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>"))
+        self.key_tf_4.setHtml(_translate("MainWindow",
+                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                         "p, li { white-space: pre-wrap; }\n"
+                                         "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">4096</p></body></html>"))
+        self.key_tf_5.setHtml(_translate("MainWindow",
+                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                         "p, li { white-space: pre-wrap; }\n"
+                                         "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>"))
         self.key_push_1.setText(_translate("MainWindow", "生成PGP密钥"))
         self.key_label_6.setText(_translate("MainWindow", "目标文件"))
         self.key_push_2.setText(_translate("MainWindow", "浏览"))
@@ -622,11 +628,12 @@ class Ui_MainWindow(object):
         self.sig_push_1.setText(_translate("MainWindow", "浏览"))
         self.sig_push_3.setText(_translate("MainWindow", "验证"))
         self.sig_push_2.setText(_translate("MainWindow", "签名"))
-        self.sig_tf_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">私钥</p></body></html>"))
+        self.sig_tf_2.setHtml(_translate("MainWindow",
+                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                         "p, li { white-space: pre-wrap; }\n"
+                                         "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">私钥</p></body></html>"))
         self.smtp_label_1.setText(_translate("MainWindow", "Your Email"))
         self.smtp_label_2.setText(_translate("MainWindow", "Your Name"))
         self.smtp_label_3.setText(_translate("MainWindow", "Receiver\'s Email"))
@@ -664,3 +671,21 @@ class Ui_MainWindow(object):
         self.action_14.setText(_translate("MainWindow", "数字签名"))
         self.action_15.setText(_translate("MainWindow", "电子邮件"))
 
+    def addSystemTray(self):
+        Action1 = QAction("PGP客户端 -- Qt5 Version 0.9")
+        Action2 = QAction("打开主界面")
+        Action3 = QAction("退出")
+        self.trayIconMenu = QMenu()
+        self.trayIconMenu.addAction(Action1)
+        self.trayIconMenu.addSeparator()
+        self.trayIconMenu.addAction(Action2)
+        self.trayIconMenu.addAction(Action3)
+        self.trayIcon = QSystemTrayIcon()
+        self.trayIcon.setContextMenu(self.trayIconMenu)
+        self.trayIcon.setIcon(QIcon("gui/tray.ico"))
+        self.trayIcon.show()
+        self.trayIconMenu.show()
+
+    def closeEvent(self, event):
+        if self.trayIcon.isVisible():
+            self.trayIcon.hide()

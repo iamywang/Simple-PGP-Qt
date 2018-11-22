@@ -25,7 +25,7 @@ class Ui_Dialog(object):
         self.pix_label_1 = QtWidgets.QLabel(Dialog)
         self.pix_label_1.setGeometry(QtCore.QRect(0, 0, 150, 150))
         self.pix_label_1.setText("")
-        self.pix_label_1.setPixmap(QtGui.QPixmap("../../主页/iamywang.github.io/assets/img/self.jpg"))
+        self.pix_label_1.setPixmap(QtGui.QPixmap("gui/auth.jpg"))
         self.pix_label_1.setScaledContents(True)
         self.pix_label_1.setObjectName("pix_label_1")
         self.label = QtWidgets.QLabel(Dialog)
