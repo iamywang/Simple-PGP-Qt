@@ -496,7 +496,7 @@ class Ui_MainWindow(object):
         self.pix_label_1 = QtWidgets.QLabel(self.centralwidget)
         self.pix_label_1.setGeometry(QtCore.QRect(10, 360, 150, 150))
         self.pix_label_1.setText("")
-        self.pix_label_1.setPixmap(QtGui.QPixmap("gui/auth.jpg"))
+        self.pix_label_1.setPixmap(QtGui.QPixmap("Assets/auth.jpg"))
         self.pix_label_1.setScaledContents(True)
         self.pix_label_1.setObjectName("pix_label_1")
         self.pix_label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -574,7 +574,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "PGP客户端（Based on Qt5） Version 0.9"))
-        MainWindow.setWindowIcon((QIcon("gui/tray.ico")))
+        MainWindow.setWindowIcon((QIcon("Assets/tray.ico")))
         self.title_label_1.setText(_translate("MainWindow", "密钥管理"))
         self.key_label_1.setText(_translate("MainWindow", "姓名"))
         self.key_label_2.setText(_translate("MainWindow", "电子邮件"))
@@ -682,7 +682,7 @@ class Ui_MainWindow(object):
         self.trayIconMenu.addAction(Action3)
         self.trayIcon = QSystemTrayIcon()
         self.trayIcon.setContextMenu(self.trayIconMenu)
-        self.trayIcon.setIcon(QIcon("gui/tray.ico"))
+        self.trayIcon.setIcon(QIcon("Assets/tray.ico"))
         self.trayIcon.show()
         self.trayIconMenu.show()
 
