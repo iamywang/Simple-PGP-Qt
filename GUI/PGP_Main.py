@@ -8,7 +8,7 @@
 import pgpy
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QSystemTrayIcon, QMenu, QAction, QFileDialog
+from PyQt5.QtWidgets import QSystemTrayIcon, QFileDialog
 
 from Util import Manage, FileCompress
 
@@ -677,44 +677,35 @@ class PGP_MainWindow(object):
         self.action_15.setText(_translate("MainWindow", "电子邮件"))
 
     def addSystemTray(self):
-        Action1 = QAction("PGP客户端 - Qt5 Version 1.0")
-        Action2 = QAction("打开主界面")
-        Action3 = QAction("退出")
-        self.trayIconMenu = QMenu()
-        self.trayIconMenu.addAction(Action1)
-        self.trayIconMenu.addSeparator()
-        self.trayIconMenu.addAction(Action2)
-        self.trayIconMenu.addAction(Action3)
         self.trayIcon = QSystemTrayIcon()
-        self.trayIcon.setContextMenu(self.trayIconMenu)
         self.trayIcon.setIcon(QIcon("Assets/tray.ico"))
         self.trayIcon.show()
 
     def setupEvents(self):
-        self.key_push_1.clicked.connect(self.create_newkey())
-        self.key_push_2.clicked.connect(self.set_manage_file())
-        self.key_push_3.clicked.connect(self.import_key())
-        self.key_push_4.clicked.connect(self.export_key())
-        self.key_push_5.clicked.connect(self.backup_key())
+        self.key_push_1.clicked.connect(self.create_newkey)
+        self.key_push_2.clicked.connect(self.set_manage_file)
+        self.key_push_3.clicked.connect(self.import_key)
+        self.key_push_4.clicked.connect(self.export_key)
+        self.key_push_5.clicked.connect(self.backup_key)
 
-        self.file_push_1.clicked.connect(self.set_file_source())
-        self.file_push_2.clicked.connect(self.set_file_target())
-        self.file_push_3.clicked.connect(self.file_encode())
-        self.file_push_4.clicked.connect(self.file_decode())
+        self.file_push_1.clicked.connect(self.set_file_source)
+        self.file_push_2.clicked.connect(self.set_file_target)
+        self.file_push_3.clicked.connect(self.file_encode)
+        self.file_push_4.clicked.connect(self.file_decode)
 
-        self.clip_push_1.clicked.connect(self.clip_encode())
-        self.clip_push_2.clicked.connect(self.clip_decode())
+        self.clip_push_1.clicked.connect(self.clip_encode)
+        self.clip_push_2.clicked.connect(self.clip_decode)
 
-        self.zip_push_1.clicked.connect(self.set_com_source())
-        self.zip_push_2.clicked.connect(self.set_com_target())
-        self.zip_push_3.clicked.connect(self.file_compress())
-        self.zip_push_4.clicked.connect(self.file_decompress())
+        self.zip_push_1.clicked.connect(self.set_com_source)
+        self.zip_push_2.clicked.connect(self.set_com_target)
+        self.zip_push_3.clicked.connect(self.file_compress)
+        self.zip_push_4.clicked.connect(self.file_decompress)
 
-        self.sig_push_1.clicked.connect(self.set_sig_file())
-        self.sig_push_2.clicked.connect(self.sig_add())
-        self.sig_push_3.clicked.connect(self.sig_check())
+        self.sig_push_1.clicked.connect(self.set_sig_file)
+        self.sig_push_2.clicked.connect(self.sig_add)
+        self.sig_push_3.clicked.connect(self.sig_check)
 
-        self.smtp_push.clicked.connect(self.send_email())
+        self.smtp_push.clicked.connect(self.send_email)
 
     # ==================================================================================================================
     # 页面1：密钥管理（完成）
@@ -725,7 +716,7 @@ class PGP_MainWindow(object):
         self.key_display.setText(key)
 
     def set_manage_file(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件")
+        path = QFileDialog.getOpenFileName(self, "打开文件", "")
         self.key_tf_6.setText(path)
 
     def import_key(self):
@@ -746,11 +737,11 @@ class PGP_MainWindow(object):
     # 页面2：文件加密解密（完成）
     # ==================================================================================================================
     def set_file_source(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件")
+        path = QFileDialog.getOpenFileName(self, "打开文件", "")
         self.file_tf_1.setText(path)
 
     def set_file_target(self):
-        path = QFileDialog.getExistingDirectory(self, "打开文件夹")
+        path = QFileDialog.getExistingDirectory(self, "打开文件夹", "")
         self.file_tf_2.setText(path)
 
     def file_encode(self):
@@ -780,11 +771,11 @@ class PGP_MainWindow(object):
     # 页面4：压缩解压缩（完成）
     # ==================================================================================================================
     def set_com_source(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件")
+        path = QFileDialog.getOpenFileName(self, "打开文件", "")
         self.zip_tf_1.setText(path)
 
     def set_com_target(self):
-        path = QFileDialog.getExistingDirectory(self, "打开文件夹")
+        path = QFileDialog.getExistingDirectory(self, "打开文件夹", "")
         self.zip_tf_2.setText(path)
 
     def file_compress(self):
@@ -807,7 +798,7 @@ class PGP_MainWindow(object):
     # 页面5：数字签名（未完成）
     # ==================================================================================================================
     def set_sig_file(self):
-        path = QFileDialog.getOpenFileName(self, "open file dialog")
+        path = QFileDialog.getOpenFileName(self, "打开文件", "")
         self.sig_tf_1.setText(path)
 
     def sig_add(self):

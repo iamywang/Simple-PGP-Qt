@@ -14,9 +14,10 @@ def encode(msg, key):
 
 
 def decode(msg, skey):
-    msg1 = pgpy.PGPMessage.new(msg)
-    decrypted_message = skey.decrypt(msg1)
-    return decrypted_message
+    with skey.unlock("C0rrectPassphr@se"):
+        msg1 = pgpy.PGPMessage.new(msg)
+        decrypted_message = skey.decrypt(msg1)
+        return decrypted_message
 
 
 def encode_file(file, key):
@@ -33,13 +34,14 @@ def encode_file(file, key):
 
 
 def decode_file(file, skey):
-    with open(file, "r") as f:
-        s = ""
-        while True:
-            line1 = f.readline()
-            if line1:
-                s += line1 + "\n"
-            else:
-                break
-        msg = decode(s, skey)
-        return msg
+    with skey.unlock("C0rrectPassphr@se"):
+        with open(file, "r") as f:
+            s = ""
+            while True:
+                line1 = f.readline()
+                if line1:
+                    s += line1 + "\n"
+                else:
+                    break
+            msg = decode(s, skey)
+            return msg
