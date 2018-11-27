@@ -10,16 +10,14 @@ def write_file(str0, zipf, file):
 def read_file(zipf, file):
     zipf = zipfile.ZipFile(zipf, 'r')
     str1 = zipf.read(file)
-    print(str1.hex())
-    print(str1.decode("utf8"))
+    return str1
 
 
 def compress_txt(str0):
     str1 = zlib.compress(str0)
-    print(len(str0), str0)
-    print(len(str1), str1.hex())
+    return str1
 
 
 def decompress_txt(str1):
     str2 = zlib.decompress(str1)
-    print(len(str2), str2)
+    return str2
