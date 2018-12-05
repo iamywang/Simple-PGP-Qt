@@ -12,7 +12,7 @@ def create(name, email, password):
                              CompressionAlgorithm.Uncompressed])
 
     key.protect(password, SymmetricKeyAlgorithm.AES256, HashAlgorithm.SHA256)
-    return key.pubkey
+    return key
 
 
 def encode(msg, key):

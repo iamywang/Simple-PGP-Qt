@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'pgp.ui'
-#
-# Created by: PyQt5 UI code generator 5.11.3
-#
-# WARNING! All changes made in this file will be lost!
 import pgpy
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
@@ -30,7 +23,6 @@ class PGP_MainWindow(object):
         self.title_label_1 = QtWidgets.QLabel(self.page_1)
         self.title_label_1.setGeometry(QtCore.QRect(0, 0, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.title_label_1.setFont(font)
         self.title_label_1.setAlignment(QtCore.Qt.AlignCenter)
@@ -73,7 +65,6 @@ class PGP_MainWindow(object):
         self.key_push_1 = QtWidgets.QPushButton(self.page_1)
         self.key_push_1.setGeometry(QtCore.QRect(430, 140, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -95,7 +86,6 @@ class PGP_MainWindow(object):
         self.key_push_3 = QtWidgets.QPushButton(self.page_1)
         self.key_push_3.setGeometry(QtCore.QRect(240, 450, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -104,7 +94,6 @@ class PGP_MainWindow(object):
         self.key_push_4 = QtWidgets.QPushButton(self.page_1)
         self.key_push_4.setGeometry(QtCore.QRect(430, 450, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -113,7 +102,6 @@ class PGP_MainWindow(object):
         self.key_push_5 = QtWidgets.QPushButton(self.page_1)
         self.key_push_5.setGeometry(QtCore.QRect(430, 510, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -125,7 +113,6 @@ class PGP_MainWindow(object):
         self.title_label_2 = QtWidgets.QLabel(self.page_2)
         self.title_label_2.setGeometry(QtCore.QRect(0, 0, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.title_label_2.setFont(font)
         self.title_label_2.setAlignment(QtCore.Qt.AlignCenter)
@@ -157,7 +144,6 @@ class PGP_MainWindow(object):
         self.file_push_7 = QtWidgets.QPushButton(self.page_2)
         self.file_push_7.setGeometry(QtCore.QRect(240, 400, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -172,7 +158,6 @@ class PGP_MainWindow(object):
         self.file_push_8 = QtWidgets.QPushButton(self.page_2)
         self.file_push_8.setGeometry(QtCore.QRect(430, 400, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -191,7 +176,6 @@ class PGP_MainWindow(object):
         self.file_label_title_2 = QtWidgets.QLabel(self.page_2)
         self.file_label_title_2.setGeometry(QtCore.QRect(0, 200, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.file_label_title_2.setFont(font)
         self.file_label_title_2.setAlignment(QtCore.Qt.AlignCenter)
@@ -199,7 +183,6 @@ class PGP_MainWindow(object):
         self.file_push_4 = QtWidgets.QPushButton(self.page_2)
         self.file_push_4.setGeometry(QtCore.QRect(430, 140, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -208,7 +191,6 @@ class PGP_MainWindow(object):
         self.file_push_3 = QtWidgets.QPushButton(self.page_2)
         self.file_push_3.setGeometry(QtCore.QRect(240, 140, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -220,7 +202,6 @@ class PGP_MainWindow(object):
         self.title_label_3 = QtWidgets.QLabel(self.page_3)
         self.title_label_3.setGeometry(QtCore.QRect(0, 0, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.title_label_3.setFont(font)
         self.title_label_3.setAlignment(QtCore.Qt.AlignCenter)
@@ -231,7 +212,6 @@ class PGP_MainWindow(object):
         self.clip_push_1 = QtWidgets.QPushButton(self.page_3)
         self.clip_push_1.setGeometry(QtCore.QRect(240, 480, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -240,7 +220,6 @@ class PGP_MainWindow(object):
         self.clip_push_2 = QtWidgets.QPushButton(self.page_3)
         self.clip_push_2.setGeometry(QtCore.QRect(430, 480, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -252,7 +231,6 @@ class PGP_MainWindow(object):
         self.title_label_4 = QtWidgets.QLabel(self.page_4)
         self.title_label_4.setGeometry(QtCore.QRect(0, 0, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.title_label_4.setFont(font)
         self.title_label_4.setAlignment(QtCore.Qt.AlignCenter)
@@ -274,7 +252,6 @@ class PGP_MainWindow(object):
         self.zip_push_3 = QtWidgets.QPushButton(self.page_4)
         self.zip_push_3.setGeometry(QtCore.QRect(240, 130, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -289,7 +266,6 @@ class PGP_MainWindow(object):
         self.zip_push_4 = QtWidgets.QPushButton(self.page_4)
         self.zip_push_4.setGeometry(QtCore.QRect(430, 130, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -301,7 +277,6 @@ class PGP_MainWindow(object):
         self.title_label_5 = QtWidgets.QLabel(self.page_5)
         self.title_label_5.setGeometry(QtCore.QRect(0, 0, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.title_label_5.setFont(font)
         self.title_label_5.setAlignment(QtCore.Qt.AlignCenter)
@@ -319,7 +294,6 @@ class PGP_MainWindow(object):
         self.sig_push_3 = QtWidgets.QPushButton(self.page_5)
         self.sig_push_3.setGeometry(QtCore.QRect(430, 100, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -328,7 +302,6 @@ class PGP_MainWindow(object):
         self.sig_push_2 = QtWidgets.QPushButton(self.page_5)
         self.sig_push_2.setGeometry(QtCore.QRect(240, 100, 180, 45))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
@@ -449,7 +422,6 @@ class PGP_MainWindow(object):
         self.title_label_6 = QtWidgets.QLabel(self.page_6)
         self.title_label_6.setGeometry(QtCore.QRect(0, 0, 250, 50))
         font = QtGui.QFont()
-        font.setFamily(".萍方-简")
         font.setPointSize(18)
         self.title_label_6.setFont(font)
         self.title_label_6.setAlignment(QtCore.Qt.AlignCenter)
@@ -565,7 +537,7 @@ class PGP_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "PGP客户端（Based on Qt5） Version 1.0"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "PyQt5-PGPClient Version 1.1.20181205"))
         MainWindow.setWindowIcon((QIcon("Assets/tray.ico")))
         self.title_label_1.setText(_translate("MainWindow", "密钥管理"))
         self.key_label_1.setText(_translate("MainWindow", "姓名"))
@@ -573,18 +545,8 @@ class PGP_MainWindow(object):
         self.key_label_3.setText(_translate("MainWindow", "密码"))
         self.key_label_4.setText(_translate("MainWindow", "RSA密钥长度"))
         self.key_label_5.setText(_translate("MainWindow", "期限"))
-        self.key_tf_4.setHtml(_translate("MainWindow",
-                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                         "p, li { white-space: pre-wrap; }\n"
-                                         "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">4096</p></body></html>"))
-        self.key_tf_5.setHtml(_translate("MainWindow",
-                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                         "p, li { white-space: pre-wrap; }\n"
-                                         "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>"))
+        self.key_tf_4.setText("4096")
+        self.key_tf_5.setText("0")
         self.key_push_1.setText(_translate("MainWindow", "生成PGP密钥"))
         self.key_label_6.setText(_translate("MainWindow", "目标文件"))
         self.key_push_2.setText(_translate("MainWindow", "浏览"))
@@ -620,21 +582,15 @@ class PGP_MainWindow(object):
         self.sig_push_1.setText(_translate("MainWindow", "浏览"))
         self.sig_push_3.setText(_translate("MainWindow", "验证"))
         self.sig_push_2.setText(_translate("MainWindow", "签名"))
-        self.sig_tf_2.setHtml(_translate("MainWindow",
-                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                         "p, li { white-space: pre-wrap; }\n"
-                                         "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">...</p></body></html>"))
-        self.smtp_label_1.setText(_translate("MainWindow", "Your Email"))
-        self.smtp_label_2.setText(_translate("MainWindow", "Your Name"))
-        self.smtp_label_3.setText(_translate("MainWindow", "Receiver\'s Email"))
-        self.smtp_label_4.setText(_translate("MainWindow", "Receiver\'s Name"))
-        self.smtp_label_5.setText(_translate("MainWindow", "Password"))
-        self.smtp_label_6.setText(_translate("MainWindow", "SMTP"))
-        self.smtp_push.setText(_translate("MainWindow", "Send"))
-        self.smtp_label_8.setText(_translate("MainWindow", "Subject"))
-        self.smtp_label_9.setText(_translate("MainWindow", "Text"))
+        self.smtp_label_1.setText(_translate("MainWindow", " 发件人邮件："))
+        self.smtp_label_2.setText(_translate("MainWindow", " 发件人姓名："))
+        self.smtp_label_3.setText(_translate("MainWindow", " 收件人邮件："))
+        self.smtp_label_4.setText(_translate("MainWindow", " 收件人姓名："))
+        self.smtp_label_5.setText(_translate("MainWindow", " 密码："))
+        self.smtp_label_6.setText(_translate("MainWindow", " SMTP："))
+        self.smtp_push.setText(_translate("MainWindow", "发送"))
+        self.smtp_label_8.setText(_translate("MainWindow", " 标题："))
+        self.smtp_label_9.setText(_translate("MainWindow", "内容"))
         self.title_label_6.setText(_translate("MainWindow", "SMTP电子邮件"))
         self.button_left_1.setText(_translate("MainWindow", "密钥管理"))
         self.button_left_2.setText(_translate("MainWindow", "文件加密/解密"))
@@ -642,7 +598,7 @@ class PGP_MainWindow(object):
         self.button_left_4.setText(_translate("MainWindow", "压缩/解压缩"))
         self.button_left_5.setText(_translate("MainWindow", "数字签名"))
         self.button_left_6.setText(_translate("MainWindow", "SMTP电子邮件"))
-        self.pix_label_2.setText(_translate("MainWindow", "Y.Wang"))
+        self.pix_label_2.setText(_translate("MainWindow", "开发者：Y.Wang"))
         self.menu.setTitle(_translate("MainWindow", "文件"))
         self.menu_2.setTitle(_translate("MainWindow", "工具"))
         self.menu_3.setTitle(_translate("MainWindow", "密钥"))
@@ -700,12 +656,11 @@ class PGP_MainWindow(object):
 
         self.smtp_push.clicked.connect(self.send_email)
 
-    # ==================================================================================================================
-    # 页面1：密钥管理
-    # ==================================================================================================================
     def create_newkey(self):
         from Util import Manage
-        key = Manage.create(self.key_tf_1.toPlainText(), self.key_tf_2.toPlainText(), self.key_tf_3.toPlainText())
+        nkey = Manage.create(self.key_tf_1.toPlainText(), self.key_tf_2.toPlainText(), self.key_tf_3.toPlainText())
+        key = nkey.pubkey
+        skey = nkey
         self.key_display.setText(str(key))
 
     def set_manage_file(self):
@@ -726,9 +681,6 @@ class PGP_MainWindow(object):
         with open(path, "w") as file:
             file.write(str(self.key))
 
-    # ==================================================================================================================
-    # 页面2：文件加密解密
-    # ==================================================================================================================
     def set_file_source(self):
         path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
         self.file_tf_1.setText(path[0])
@@ -747,9 +699,6 @@ class PGP_MainWindow(object):
         with open(self.file_tf_2.toPlainText() + "file_decode.txt", 'w') as file:
             file.write(str(msg))
 
-    # ==================================================================================================================
-    # 页面3：剪贴板
-    # ==================================================================================================================
     def clip_encode(self):
         msg = self.clip_tf.toPlainText()
         msg1 = Manage.encode(msg, self.key)
@@ -760,9 +709,6 @@ class PGP_MainWindow(object):
         msg1 = Manage.decode(msg, self.skey)
         self.clip_tf.setText(str(msg1))
 
-    # ==================================================================================================================
-    # 页面4：压缩解压缩
-    # ==================================================================================================================
     def set_com_source(self):
         path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
         self.zip_tf_1.setText(path[0])
@@ -787,43 +733,33 @@ class PGP_MainWindow(object):
         with open(self.zip_tf_2.toPlainText() + "/decompress", "w") as f:
             f.write(str1)
 
-    # ==================================================================================================================
-    # 页面5：数字签名
-    # ==================================================================================================================
     def set_sig_file(self):
         path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
         self.sig_tf_1.setText(path[0])
 
     def sig_add(self):
-        sig = self.skey.sign("I have just signed this text!")
         message = ""
-        with open(self.zip_tf_1.toPlainText(), "r") as f:
+        with open(self.sig_tf_1.toPlainText(), "r") as f:
             while True:
                 line1 = f.readline()
                 if line1:
                     message += line1 + "\n"
                 else:
                     break
-        message |= self.skey.sign(message)
-        timesig = self.skey.sign(None)
-        lone_sig = self.skey.sign(None, notation={"cheese status": "standing alone"})
+        message = pgpy.PGPMessage.new(message, cleartext=True)
+        signature = self.skey.sign(message)
+        message |= signature
+        self.sig_tf_2.setText(str(message))
 
     def sig_check(self):
-        sig = self.skey.sign("I have just signed this text!")
-        message = ""
-        with open(self.zip_tf_1.toPlainText(), "r") as f:
-            while True:
-                line1 = f.readline()
-                if line1:
-                    message += line1 + "\n"
-                else:
-                    break
-        self.key.verify("I have just signed this text!", sig)
-        self.key.verify(message)
+        message = pgpy.PGPMessage.from_blob(self.sig_tf_2.toPlainText())
+        print(message)
+        flag = self.key.verify(message)
+        if flag == True:
+            print("认证成功")
+        else:
+            print("认证失败")
 
-    # ==================================================================================================================
-    # 页面6：SMTP
-    # ==================================================================================================================
     def send_email(self):
         from Util.SMTP import Send_email
         Send_email.set_details(self.smtp_tf_1.toPlainText(), self.smtp_tf_5.toPlainText(), self.smtp_tf_3.toPlainText(),
