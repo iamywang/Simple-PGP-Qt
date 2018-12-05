@@ -65,11 +65,9 @@ class PGP_MainWindow(object):
         self.key_tf_3.setGeometry(QtCore.QRect(100, 140, 200, 32))
         self.key_tf_3.setObjectName("key_tf_3")
         self.key_tf_4 = QtWidgets.QTextEdit(self.page_1)
-        self.key_tf_4.setEnabled(False)
         self.key_tf_4.setGeometry(QtCore.QRect(400, 60, 200, 32))
         self.key_tf_4.setObjectName("key_tf_4")
         self.key_tf_5 = QtWidgets.QTextEdit(self.page_1)
-        self.key_tf_5.setEnabled(False)
         self.key_tf_5.setGeometry(QtCore.QRect(400, 100, 200, 32))
         self.key_tf_5.setObjectName("key_tf_5")
         self.key_push_1 = QtWidgets.QPushButton(self.page_1)
@@ -82,7 +80,6 @@ class PGP_MainWindow(object):
         self.key_push_1.setFont(font)
         self.key_push_1.setObjectName("key_push_1")
         self.key_display = QtWidgets.QTextEdit(self.page_1)
-        self.key_display.setEnabled(False)
         self.key_display.setGeometry(QtCore.QRect(5, 200, 610, 200))
         self.key_display.setObjectName("key_display")
         self.key_label_6 = QtWidgets.QLabel(self.page_1)
@@ -90,7 +87,6 @@ class PGP_MainWindow(object):
         self.key_label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.key_label_6.setObjectName("key_label_6")
         self.key_tf_6 = QtWidgets.QTextEdit(self.page_1)
-        self.key_tf_6.setEnabled(False)
         self.key_tf_6.setGeometry(QtCore.QRect(100, 410, 400, 32))
         self.key_tf_6.setObjectName("key_tf_6")
         self.key_push_2 = QtWidgets.QPushButton(self.page_1)
@@ -138,7 +134,6 @@ class PGP_MainWindow(object):
         self.file_push_1.setGeometry(QtCore.QRect(510, 60, 100, 32))
         self.file_push_1.setObjectName("file_push_1")
         self.file_tf_1 = QtWidgets.QTextEdit(self.page_2)
-        self.file_tf_1.setEnabled(False)
         self.file_tf_1.setGeometry(QtCore.QRect(100, 60, 400, 32))
         self.file_tf_1.setObjectName("file_tf_1")
         self.file_label_1 = QtWidgets.QLabel(self.page_2)
@@ -146,7 +141,6 @@ class PGP_MainWindow(object):
         self.file_label_1.setAlignment(QtCore.Qt.AlignCenter)
         self.file_label_1.setObjectName("file_label_1")
         self.file_tf_2 = QtWidgets.QTextEdit(self.page_2)
-        self.file_tf_2.setEnabled(False)
         self.file_tf_2.setGeometry(QtCore.QRect(100, 100, 400, 32))
         self.file_tf_2.setObjectName("file_tf_2")
         self.file_label_2 = QtWidgets.QLabel(self.page_2)
@@ -173,7 +167,6 @@ class PGP_MainWindow(object):
         self.file_push_6.setGeometry(QtCore.QRect(510, 360, 100, 32))
         self.file_push_6.setObjectName("file_push_6")
         self.file_tf_3 = QtWidgets.QTextEdit(self.page_2)
-        self.file_tf_3.setEnabled(False)
         self.file_tf_3.setGeometry(QtCore.QRect(100, 320, 400, 32))
         self.file_tf_3.setObjectName("file_tf_3")
         self.file_push_8 = QtWidgets.QPushButton(self.page_2)
@@ -190,7 +183,6 @@ class PGP_MainWindow(object):
         self.file_label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.file_label_3.setObjectName("file_label_3")
         self.file_tf_4 = QtWidgets.QTextEdit(self.page_2)
-        self.file_tf_4.setEnabled(False)
         self.file_tf_4.setGeometry(QtCore.QRect(100, 360, 400, 32))
         self.file_tf_4.setObjectName("file_tf_4")
         self.file_push_5 = QtWidgets.QPushButton(self.page_2)
@@ -234,7 +226,6 @@ class PGP_MainWindow(object):
         self.title_label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.title_label_3.setObjectName("title_label_3")
         self.clip_tf = QtWidgets.QTextEdit(self.page_3)
-        self.clip_tf.setEnabled(False)
         self.clip_tf.setGeometry(QtCore.QRect(0, 60, 610, 400))
         self.clip_tf.setObjectName("clip_tf")
         self.clip_push_1 = QtWidgets.QPushButton(self.page_3)
@@ -290,11 +281,9 @@ class PGP_MainWindow(object):
         self.zip_push_3.setFont(font)
         self.zip_push_3.setObjectName("zip_push_3")
         self.zip_tf_2 = QtWidgets.QTextEdit(self.page_4)
-        self.zip_tf_2.setEnabled(False)
         self.zip_tf_2.setGeometry(QtCore.QRect(100, 90, 400, 32))
         self.zip_tf_2.setObjectName("zip_tf_2")
         self.zip_tf_1 = QtWidgets.QTextEdit(self.page_4)
-        self.zip_tf_1.setEnabled(False)
         self.zip_tf_1.setGeometry(QtCore.QRect(100, 50, 400, 32))
         self.zip_tf_1.setObjectName("zip_tf_1")
         self.zip_push_4 = QtWidgets.QPushButton(self.page_4)
@@ -318,7 +307,6 @@ class PGP_MainWindow(object):
         self.title_label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.title_label_5.setObjectName("title_label_5")
         self.sig_tf_1 = QtWidgets.QTextEdit(self.page_5)
-        self.sig_tf_1.setEnabled(False)
         self.sig_tf_1.setGeometry(QtCore.QRect(100, 60, 400, 32))
         self.sig_tf_1.setObjectName("sig_tf_1")
         self.sig_label_1 = QtWidgets.QLabel(self.page_5)
@@ -347,7 +335,6 @@ class PGP_MainWindow(object):
         self.sig_push_2.setFont(font)
         self.sig_push_2.setObjectName("sig_push_2")
         self.sig_tf_2 = QtWidgets.QTextEdit(self.page_5)
-        self.sig_tf_2.setEnabled(True)
         self.sig_tf_2.setGeometry(QtCore.QRect(0, 150, 610, 400))
         self.sig_tf_2.setObjectName("sig_tf_2")
         self.stackedWidget.addWidget(self.page_5)
@@ -682,6 +669,12 @@ class PGP_MainWindow(object):
         self.trayIcon.show()
 
     def setupEvents(self):
+        self.button_left_1.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        self.button_left_2.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
+        self.button_left_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
+        self.button_left_4.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
+        self.button_left_5.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+        self.button_left_6.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
         self.key_push_1.clicked.connect(self.create_newkey)
         self.key_push_2.clicked.connect(self.set_manage_file)
         self.key_push_3.clicked.connect(self.import_key)
@@ -732,6 +725,7 @@ class PGP_MainWindow(object):
         path = self.key_tf_6.toPlainText()
         with open(path, "w") as file:
             file.write(str(self.key))
+
     # ==================================================================================================================
     # 页面2：文件加密解密（完成）
     # ==================================================================================================================
@@ -746,12 +740,12 @@ class PGP_MainWindow(object):
     def file_encode(self):
         msg = Manage.encode_file(self.file_tf_1.toPlainText(), self.key)
         with open(self.file_tf_2.toPlainText() + "/file_encode.txt", 'w') as file:
-            file.write(msg)
+            file.write(str(msg))
 
     def file_decode(self):
         msg = Manage.decode_file(self.file_tf_1.toPlainText(), self.skey)
         with open(self.file_tf_2.toPlainText() + "file_decode.txt", 'w') as file:
-            file.write(msg)
+            file.write(str(msg))
 
     # ==================================================================================================================
     # 页面3：剪贴板（完成）
@@ -759,12 +753,12 @@ class PGP_MainWindow(object):
     def clip_encode(self):
         msg = self.clip_tf.toPlainText()
         msg1 = Manage.encode(msg, self.key)
-        self.clip_tf.setText(msg1)
+        self.clip_tf.setText(str(msg1))
 
     def clip_decode(self):
         msg = self.clip_tf.toPlainText()
         msg1 = Manage.decode(msg, self.skey)
-        self.clip_tf.setText(msg1)
+        self.clip_tf.setText(str(msg1))
 
     # ==================================================================================================================
     # 页面4：压缩解压缩（完成）
