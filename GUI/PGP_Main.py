@@ -713,11 +713,11 @@ class PGP_MainWindow(object):
     def create_newkey(self):
         from Util import Manage
         key = Manage.create(self.key_tf_1.toPlainText(), self.key_tf_2.toPlainText(), self.key_tf_3.toPlainText())
-        self.key_display.setText(key)
+        self.key_display.setText(str(key))
 
     def set_manage_file(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件", "")
-        self.key_tf_6.setText(path)
+        path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
+        self.key_tf_6.setText(path[0])
 
     def import_key(self):
         path = self.key_tf_6.toPlainText()
@@ -726,23 +726,22 @@ class PGP_MainWindow(object):
     def export_key(self):
         path = self.key_tf_6.toPlainText()
         with open(path, "w") as file:
-            file.write(self.key)
+            file.write(str(self.key))
 
     def backup_key(self):
         path = self.key_tf_6.toPlainText()
         with open(path, "w") as file:
-            file.write(self.key)
-
+            file.write(str(self.key))
     # ==================================================================================================================
     # 页面2：文件加密解密（完成）
     # ==================================================================================================================
     def set_file_source(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件", "")
-        self.file_tf_1.setText(path)
+        path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
+        self.file_tf_1.setText(path[0])
 
     def set_file_target(self):
-        path = QFileDialog.getExistingDirectory(self, "打开文件夹", "")
-        self.file_tf_2.setText(path)
+        path = QFileDialog.getExistingDirectory(self.centralwidget, "打开文件夹", "")
+        self.file_tf_2.setText(path[0])
 
     def file_encode(self):
         msg = Manage.encode_file(self.file_tf_1.toPlainText(), self.key)
@@ -771,12 +770,12 @@ class PGP_MainWindow(object):
     # 页面4：压缩解压缩（完成）
     # ==================================================================================================================
     def set_com_source(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件", "")
-        self.zip_tf_1.setText(path)
+        path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
+        self.zip_tf_1.setText(path[0])
 
     def set_com_target(self):
-        path = QFileDialog.getExistingDirectory(self, "打开文件夹", "")
-        self.zip_tf_2.setText(path)
+        path = QFileDialog.getExistingDirectory(self.centralwidget, "打开文件夹", "")
+        self.zip_tf_2.setText(path[0])
 
     def file_compress(self):
         with open(self.zip_tf_1.toPlainText(), "r") as f:
@@ -798,8 +797,8 @@ class PGP_MainWindow(object):
     # 页面5：数字签名（未完成）
     # ==================================================================================================================
     def set_sig_file(self):
-        path = QFileDialog.getOpenFileName(self, "打开文件", "")
-        self.sig_tf_1.setText(path)
+        path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
+        self.sig_tf_1.setText(path[0])
 
     def sig_add(self):
         print("not finished")
