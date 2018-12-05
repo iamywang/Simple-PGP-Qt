@@ -1,8 +1,9 @@
 import pgpy
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QSystemTrayIcon, QFileDialog
+from PyQt5.QtWidgets import QSystemTrayIcon, QFileDialog, QDialog
 
+from GUI.PGP_About import PGP_About
 from Util import Manage, FileCompress
 
 
@@ -636,25 +637,27 @@ class PGP_MainWindow(object):
         self.key_push_3.clicked.connect(self.import_key)
         self.key_push_4.clicked.connect(self.export_key)
         self.key_push_5.clicked.connect(self.backup_key)
-
         self.file_push_1.clicked.connect(self.set_file_source)
         self.file_push_2.clicked.connect(self.set_file_target)
         self.file_push_3.clicked.connect(self.file_encode)
         self.file_push_4.clicked.connect(self.file_decode)
-
         self.clip_push_1.clicked.connect(self.clip_encode)
         self.clip_push_2.clicked.connect(self.clip_decode)
-
         self.zip_push_1.clicked.connect(self.set_com_source)
         self.zip_push_2.clicked.connect(self.set_com_target)
         self.zip_push_3.clicked.connect(self.file_compress)
         self.zip_push_4.clicked.connect(self.file_decompress)
-
         self.sig_push_1.clicked.connect(self.set_sig_file)
         self.sig_push_2.clicked.connect(self.sig_add)
         self.sig_push_3.clicked.connect(self.sig_check)
-
         self.smtp_push.clicked.connect(self.send_email)
+        self.action.triggered.connect(self.showAbout)
+
+    def showAbout(self):
+        self.aboutUI = PGP_About()
+        self.aboutDialog = QDialog()
+        self.aboutUI.setupUi(self.aboutDialog)
+        self.aboutDialog.show()
 
     def create_newkey(self):
         from Util import Manage
