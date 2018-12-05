@@ -625,7 +625,7 @@ class PGP_MainWindow(object):
                                          "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                                          "p, li { white-space: pre-wrap; }\n"
                                          "</style></head><body style=\" font-family:\'.蘋方-簡\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">私钥</p></body></html>"))
+                                         "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">...</p></body></html>"))
         self.smtp_label_1.setText(_translate("MainWindow", "Your Email"))
         self.smtp_label_2.setText(_translate("MainWindow", "Your Name"))
         self.smtp_label_3.setText(_translate("MainWindow", "Receiver\'s Email"))
@@ -701,7 +701,7 @@ class PGP_MainWindow(object):
         self.smtp_push.clicked.connect(self.send_email)
 
     # ==================================================================================================================
-    # 页面1：密钥管理（完成）
+    # 页面1：密钥管理
     # ==================================================================================================================
     def create_newkey(self):
         from Util import Manage
@@ -727,7 +727,7 @@ class PGP_MainWindow(object):
             file.write(str(self.key))
 
     # ==================================================================================================================
-    # 页面2：文件加密解密（完成）
+    # 页面2：文件加密解密
     # ==================================================================================================================
     def set_file_source(self):
         path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
@@ -748,7 +748,7 @@ class PGP_MainWindow(object):
             file.write(str(msg))
 
     # ==================================================================================================================
-    # 页面3：剪贴板（完成）
+    # 页面3：剪贴板
     # ==================================================================================================================
     def clip_encode(self):
         msg = self.clip_tf.toPlainText()
@@ -761,7 +761,7 @@ class PGP_MainWindow(object):
         self.clip_tf.setText(str(msg1))
 
     # ==================================================================================================================
-    # 页面4：压缩解压缩（完成）
+    # 页面4：压缩解压缩
     # ==================================================================================================================
     def set_com_source(self):
         path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
@@ -788,20 +788,41 @@ class PGP_MainWindow(object):
             f.write(str1)
 
     # ==================================================================================================================
-    # 页面5：数字签名（未完成）
+    # 页面5：数字签名
     # ==================================================================================================================
     def set_sig_file(self):
         path = QFileDialog.getOpenFileName(self.centralwidget, "打开文件", "")
         self.sig_tf_1.setText(path[0])
 
     def sig_add(self):
-        print("not finished")
+        sig = self.skey.sign("I have just signed this text!")
+        message = ""
+        with open(self.zip_tf_1.toPlainText(), "r") as f:
+            while True:
+                line1 = f.readline()
+                if line1:
+                    message += line1 + "\n"
+                else:
+                    break
+        message |= self.skey.sign(message)
+        timesig = self.skey.sign(None)
+        lone_sig = self.skey.sign(None, notation={"cheese status": "standing alone"})
 
     def sig_check(self):
-        print("not finished")
+        sig = self.skey.sign("I have just signed this text!")
+        message = ""
+        with open(self.zip_tf_1.toPlainText(), "r") as f:
+            while True:
+                line1 = f.readline()
+                if line1:
+                    message += line1 + "\n"
+                else:
+                    break
+        self.key.verify("I have just signed this text!", sig)
+        self.key.verify(message)
 
     # ==================================================================================================================
-    # 页面6：SMTP（完成）
+    # 页面6：SMTP
     # ==================================================================================================================
     def send_email(self):
         from Util.SMTP import Send_email
